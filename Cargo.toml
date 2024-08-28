@@ -1,0 +1,22 @@
+[package]
+name = "quest-tui"
+version = "0.2.0"
+authors = ["frustak <soulburn007@gmail.com>"]
+edition = "2018"
+license = "MIT OR Apache-2.0"
+description = "A crossplatform TUI todo list"
+homepage = "https://github.com/frustak/Quest"
+repository = "https://github.com/frustak/Quest"
+readme = "README.md"
+keywords = ["cli", "tui", "todo", "quest", "task"]
+categories = ["command-line-utilities"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+crossterm = { version = "0.19.0", features = ['serde'] }
+tui = { version = "0.14", default-features = false, features = ['crossterm', 'serde'] }
+serde = { version = "1.0.123", features = ["derive"] }
+lazy_static = "1.4.0"
+directories-next = "2.0.0"
+serde_json = "1.0.64"
